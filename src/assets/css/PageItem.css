@@ -1,0 +1,71 @@
+/* 整体设置 */
+.page-item{
+    display:flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    background-color: #f7f3f2;
+    margin-bottom: 1rem;
+}
+
+/* 头部容器 */
+.header-container{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0.5rem;
+}
+
+/* 头像 */
+.header-container>.header-img{
+    width: 3rem;
+    height: 3rem;
+    border-radius:50%;
+}
+
+/* 头像后文字 */
+.header-container p{
+    color:#959595;
+    font-size: 0.8rem;
+    margin-left: 0.5rem;
+}
+
+/* 描述文字 */
+.desc-container p{
+    text-align: left;
+}
+
+/* 内容容器 */
+.content-container {
+    background-color: green;
+    width: 100%;
+}
+
+/* 社交容器 */
+.contact-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+}
+
+ .contact-container img {
+    width:1.1rem;
+    height: 1.1rem;
+    margin-left: 1rem;
+}
+/*
+ .contact-container p {
+     color: #cccccc; 
+}
+
+.contact-left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.contact-right-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+} */
