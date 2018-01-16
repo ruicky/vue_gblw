@@ -6,13 +6,13 @@ import MintUI from 'mint-ui'
 import App from './App'
 import axios from 'axios';
 
-
 import router from './router'
 
 Vue.config.productionTip = false
 Vue.prototype.$axios=axios;
 
 Vue.use(MintUI)
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -12,6 +12,7 @@ import { InfiniteScroll } from "mint-ui";
 
 import PageItem from "@/components/PageItem";
 import moment from "moment";
+import { Indicator } from 'mint-ui';
 
 export default {
   data() {
@@ -30,6 +31,10 @@ export default {
     loadMore() {
       console.log("load more");
       console.log('activeTabbar',this.activeTabbar)
+      Indicator.open({
+        text: '加载中...',
+        spinnerType: 'fading-circle'
+      });
       var content_type ='-101';
       switch(this.activeTabbar){
         case '视频':
@@ -53,14 +58,19 @@ export default {
         if (originData.code != 0) {
           //TODO:错误异常处理
           console.log("服务器出错了", originData.message);
+          return;
         }
 
         var data = originData.data;
         
         if (data.message != "success") {
           //TODO:错误异常处理
+          
           console.log("获取出错了");
+          console.log('data',data);
+          return;
         }
+        Indicator.close();
         console.log("CHANGE", data.data.data);
         data.data.data.map(x => {
           this.list.push(x);
@@ -70,6 +80,7 @@ export default {
       })
       .catch(e => {
         //TODO:错误异常处理
+        Indicator.close();
         console.log(e);
       });
     }

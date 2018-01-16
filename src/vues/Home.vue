@@ -2,6 +2,7 @@
     <div id="contains">
         <Header></Header>
         <TabContainer  :activeTabbar="activeTabbar"></TabContainer>
+        <!-- <ImagePriview></ImagePriview> -->
         <Tabbar @change = "changeActiveTabbar" :TabbarData="TabbarData" :activeTabbar="activeTabbar"></Tabbar>
         
     </div>
@@ -12,6 +13,7 @@
 import Header from "@/components/Header";
 import Tabbar from "@/components/Tabbar";
 import TabContainer from "@/components/TabContainer"
+import ImagePriview from "@/components/ImagePriview"
 
 export default {
   name: "Home",
@@ -47,6 +49,7 @@ export default {
     Header,
     Tabbar,
     TabContainer,
+    ImagePriview,
   }
 };
 </script>
