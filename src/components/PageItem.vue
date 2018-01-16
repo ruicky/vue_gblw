@@ -16,7 +16,7 @@
         <video v-if="data.group.mp4_url != undefined" :src="data.group.mp4_url" controls="controls" style="width:100%">
           您的浏览器不支持 video 标签。
         </video>
-        <ImagePriview v-if="data.group.middle_image!=undefined" :images="data.group.middle_image.url_list"></ImagePriview>
+        <ImagePriview v-if="data.group.middle_image!=undefined || data.group.thumb_image_list!=undefined" :dataGroup="data.group"></ImagePriview>
       </div>
       <div>
         <!-- 神评 -->
@@ -31,6 +31,7 @@
         <img :src="imgData.forward" alt="forward">
         <p>122</p>
       </div>
+      <div style="clear:both"></div>
     </div>
   </div>
 </div>
